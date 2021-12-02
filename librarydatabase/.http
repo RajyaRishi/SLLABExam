@@ -1,0 +1,8 @@
+POST http://localhost:3001/add-new-post
+Content-Type: application/json
+
+{
+    "bookname": "C/C++ Programming",
+    "studname": "Ishita Bhardwaj",
+    "dateissue": "01/12/2021"
+}
