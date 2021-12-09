@@ -12,6 +12,8 @@ exports.create = (req, res) => {
     const tutorial = new Tutorial({
       title: req.body.title,
       description: req.body.description,
+      tadate: req.body.tadate,
+      mood: req.body.mood,
       published: req.body.published ? req.body.published : false
     });
   
