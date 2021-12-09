@@ -1,8 +1,0 @@
-POST http://localhost:3001/add-new-post
-Content-Type: application/json
-
-{
-    "Name": "Sunil Toro",
-    "regno": 201900306,
-    "marks": "40"
-}
