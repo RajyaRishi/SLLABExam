@@ -1,9 +1,9 @@
 <div>
     <div *ngIf="currentTutorial.id" class="edit-form">
-      <h4>Tutorial</h4>
+      <h4>Record</h4>
       <form>
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Username</label>
           <input
             type="text"
             class="form-control"
@@ -13,7 +13,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="description">Description</label>
+          <label for="description">Total Time Phone Accessed</label>
           <input
             type="text"
             class="form-control"
@@ -21,6 +21,33 @@
             [(ngModel)]="currentTutorial.description"
             name="description"
           />
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input
+            type = "date"
+            class="form-control"
+            id="date"
+            required
+            [(ngModel)]="currentTutorial.tadate"
+            name="date"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mood">Mood</label>
+          <select placeholder="Select Mood"
+            class="form-control"
+            id="mood"
+            required
+            [(ngModel)]="currentTutorial.mood"
+            name="mood"
+          >
+          {{currentTutorial.mood == "good" ? '<option value="good" selected> Good </option>':'<option value="good"></option>'}} 
+          {{currentTutorial.mood == "bad"? '<option value="bad" selected> Bad </option>':'<option value="bad"></option>'}}
+          {{currentTutorial.mood == "average"? '<option value="average" selected> Average </option>':'<option value="average"></option>'}}
+        </select>
         </div>
   
         <div class="form-group">
@@ -60,6 +87,6 @@
   
     <div *ngIf="!currentTutorial.id">
       <br />
-      <p>Cannot access this Tutorial...</p>
+      <p>Cannot access this record...</p>
     </div>
   </div>

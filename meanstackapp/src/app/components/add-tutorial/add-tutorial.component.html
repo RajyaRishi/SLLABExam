@@ -2,7 +2,7 @@
     <div class="submit-form">
       <div *ngIf="!submitted">
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Username</label>
           <input
             type="text"
             class="form-control"
@@ -14,7 +14,7 @@
         </div>
   
         <div class="form-group">
-          <label for="description">Description</label>
+          <label for="description">Total Time Phone Accessed</label>
           <input
             class="form-control"
             id="description"
@@ -23,12 +23,45 @@
             name="description"
           />
         </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input
+            type = "date"
+            class="form-control"
+            id="date"
+            required
+            [(ngModel)]="tutorial.tadate"
+            name="date"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mood">Mood</label>
+          <select placeholder="Select Mood"
+            class="form-control"
+            id="mood"
+            required
+            [(ngModel)]="tutorial.mood"
+            name="mood"
+          >
+        <option value="good">
+          Good
+        </option>
+        <option value="bad">
+          Bad
+        </option>
+        <option value="average">
+          Average
+        </option>
+        </select>
+        </div>
   
         <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
       </div>
   
       <div *ngIf="submitted">
-        <h4>Tutorial was submitted successfully!</h4>
+        <h4>Record was submitted successfully!</h4>
         <button class="btn btn-success" (click)="newTutorial()">Add</button>
       </div>
     </div>

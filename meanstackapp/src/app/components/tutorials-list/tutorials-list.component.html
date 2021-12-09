@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h4>Tutorials List</h4>
+      <h4>Record List</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -37,13 +37,21 @@
     </div>
     <div class="col-md-6">
       <div *ngIf="currentTutorial.id">
-        <h4>Tutorial</h4>
+        <h4>User details</h4>
         <div>
-          <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+          <label><strong>Username:</strong></label> {{ currentTutorial.title }}
         </div>
         <div>
-          <label><strong>Description:</strong></label>
+          <label><strong>Total time phone accessed:</strong></label>
           {{ currentTutorial.description }}
+        </div>
+        <div>
+          <label><strong>Date:</strong></label>
+          {{ currentTutorial.tadate }}
+        </div>
+        <div>
+          <label><strong>Mood:</strong></label>
+          {{ currentTutorial.mood }}
         </div>
         <div>
           <label><strong>Status:</strong></label>
